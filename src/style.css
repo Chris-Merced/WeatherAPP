@@ -1,7 +1,7 @@
 body {
     display:flex;
     flex-direction: column;
-    background-color: black;
+    background-color: hsla(0, 0%, 17%, 0.836);
     color: white;
     font-family: Arsenal;
     gap: 20px;
@@ -16,13 +16,14 @@ form {
     display:flex;
     gap: 10px;
     margin-bottom: 50px;
+    font-size: 1.3em;
 }
 
 button {
     width: fit-content;
-    background-color: black;
+    background-color: rgb(54, 54, 54);
     border-style: none;
-    border: rgb(175, 174, 174) 2px solid;
+    border: rgb(143, 142, 142) 2px solid;
     border-radius: 20em;
     color: rgb(207, 206, 206);
     font-family: Arsenal;
@@ -37,10 +38,11 @@ body div:not(first-child){
 }
 #city:invalid {
     background-color: hsl(0, 46%, 44%);
+    box-shadow: 0 0px 6px hsl(0, 86%, 25%);
 }
 
 #city:focus {
-    box-shadow: 0 1px 6px hsl(0, 86%, 25%);
+    box-shadow: 0 0px 6px hsl(0, 86%, 25%);
     outline: none;
 }
 
