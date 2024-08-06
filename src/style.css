@@ -1,5 +1,55 @@
 body {
+    display:flex;
+    flex-direction: column;
     background-color: black;
     color: white;
+    font-family: Arsenal;
+    gap: 20px;
+    color:hsla(0, 0%, 66%, 0.918)
 }
 
+body div:first-child{
+    font-size: 3em;
+}
+
+form {
+    display:flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+button {
+    width: fit-content;
+    background-color: black;
+    border-style: none;
+    border: rgb(175, 174, 174) 2px solid;
+    border-radius: 20em;
+    color: rgb(207, 206, 206);
+    font-family: Arsenal;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+body div:not(first-child){
+    font-size: 2em;
+}
+#city:invalid {
+    background-color: hsl(0, 46%, 44%);
+}
+
+#city:focus {
+    box-shadow: 0 1px 6px hsl(0, 86%, 25%);
+    outline: none;
+}
+
+#city {
+    border-style: none;
+    border-radius: 20em;
+}
+
+@font-face {
+    font-family: Arsenal;
+    src: url('./ArsenalSC-Regular.ttf');
+}
