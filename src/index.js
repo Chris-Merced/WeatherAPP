@@ -23,7 +23,6 @@ const addressDiv = document.createElement("div");
 const weatherDiv = document.createElement("div");
 const body = document.querySelector("body");
 
-const tempButton = document.createElement("button");
 
 async function getWeather(city = "San Jose"){
     try{
@@ -52,7 +51,9 @@ function initializePage(weather){
 }
     
 function setButton(weather){
+    const tempButton = document.createElement("button");
     tempButton.textContent = "Change Temperature Style"
+    tempButton.classList = "tempButton";
     
     tempButton.addEventListener("click", () => {
         console.log("hi")
@@ -94,6 +95,11 @@ function setSearch(){
         const city = document.getElementById("city").value
         getWeather(city).then(function(weather){
             updatePage(weather);
+            const button = document.querySelector(".tempButton");
+            const newButton = button.cloneNode();
+            button.parentElement.querySelector(".tempButton").remove();
+            setButton(weather);
+
         })
     })
 }
